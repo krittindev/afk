@@ -31,10 +31,12 @@
                 <div class="dot"></div>
             </div>
         </div>
-        <div class="text" id="text">
-            Shutting down
+        <div class="text">
+            <a href="#myAudio" id="text" style="text-decoration: none; color:white;" onclick="playAudio()">
+                Shutting down
+            </a>
         </div>
-        <audio autoplay loop controls>
+        <audio id="myAudio" loop autoplay>
             <source src="NoCopyrightMusic.mp3" type="audio/mpeg">
         </audio>
     </div>
@@ -56,6 +58,10 @@
         video.setAttribute('loop', '');
         // Add some styles if needed
         video.setAttribute('style', 'position: absolute; left: -10px; top: -10px; ');
+
+        function playAudio() {
+            document.getElementById("myAudio").play();
+        }
     </script>
 </body>
 
